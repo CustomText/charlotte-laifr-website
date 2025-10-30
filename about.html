@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>charlotte-laifr.com</title>
+</head>
+<body>
+    <div class="bar">
+        <img src="C+L-removebg-preview.png"></img>
+        <div class="grid">
+            <button class="item" data-link="index.html">homepage</button>
+            <button class="item" data-link="charri.html">A Word About Truth</button>
+            <button class="item" data-link="contact.html">contact me</button>
+            <button class="item" data-link="github.html">Github</button>
+            <button class="item" data-link="help.html">help</button>
+        </div>
+    </div>
+    <div class="glowey">
+        
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll(".item");
+
+    buttons.forEach(buttons => {
+        buttons.addEventListener("click", () => {
+            page = buttons.dataset.link;
+            window.location.href = page;
+        })
+    })
+</script>
+</html>
