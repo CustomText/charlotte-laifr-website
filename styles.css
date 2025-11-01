@@ -1,5 +1,6 @@
 body{
     background: white;
+    perspective: 1px;
 }
 
 .bar{
@@ -18,6 +19,11 @@ body{
 
 .text{
     margin-top: 100px;
+}
+
+.text::selection{
+    background-color: rgb(255, 254, 206);
+    color: rgb(200, 200, 71);
 }
 
 .grid{
