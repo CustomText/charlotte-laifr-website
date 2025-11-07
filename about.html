@@ -11,11 +11,13 @@
     <div class="bar">
         <img src="C+L-removebg-preview.png"></img>
         <div class="grid">
-            <button class="item" data-link="index.html">homepage</button>
+            <button class="item" data-link="index.html">Homepage</button>
             <button class="item" data-link="charri.html">A Word About Truth</button>
-            <button class="item" data-link="contact.html">contact me</button>
-            <button class="item" data-link="github.html">Github</button>
-            <button class="item" data-link="help.html">help</button>
+            <button class="item" data-link="contact.html">Contact Me</button>
+            <button class="item" data-link="github.html">Christmas Market App</button>
+            <button class="item" data-link="help.html">Other Sites</button>
+
+            <button class="czech" data-link="czabout.html">CZ | EN</button>
         </div>
     </div>
     <img class="background-left" src="simple_math.webp"></img>
@@ -31,6 +33,13 @@
             page = buttons.dataset.link;
             window.location.href = page;
         })
+    })
+
+    const buttonCZ = document.querySelector(".czech");
+
+    buttonCZ.addEventListener("click", () => {
+        const page = buttonCZ.dataset.link;
+        window.location.href = page;
     })
 </script>
 </html>
