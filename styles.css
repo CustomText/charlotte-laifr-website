@@ -1,6 +1,5 @@
 body{
     background: white;
-    perspective: 1px;
 }
 
 .bar{
@@ -19,6 +18,9 @@ body{
 
 .text{
     margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: large;
 }
 
 .text::selection{
@@ -28,7 +30,7 @@ body{
 
 .grid{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
   gap: 20px;
   left: 100px;
@@ -94,7 +96,7 @@ body{
 .photo{
     flex: 0 0 5em;
     height: 5em;
-    padding: 1em;
+    padding: 0em;
     font-size: 3rem;
     border-radius: .2em;
     text-align: center;
@@ -108,4 +110,36 @@ body{
     to{
         translate: -100%;
     }
+}
+
+.quote{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    pointer-events: none;
+    z-index: 50;
+    color: #fffab0;
+    font-size: auto;
+    letter-spacing: 0.02em;
+    user-select: none;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.czech{
+    background: rgb(255, 240, 109);
+    opacity: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    color: black;
+    transition: background 150ms ease-in;
+}
+
+.czech:hover{
+    background-color: rgb(170, 255, 147);
 }
