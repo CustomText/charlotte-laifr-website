@@ -17,17 +17,33 @@ body{
 }
 
 .grid{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    gap: 20px;
-    left: 100px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+  left: 100px;
 }
 
 .item{
-    background: white;
+  background: white;
+  opacity: 100%;
+  border: 1px solid #999;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  font-family: sans-serif;
+  color: black;
+  transition: background 150ms ease-in;
+}
+
+.item:hover{
+    background: lightgreen;
+}
+
+.czech{
+    background: rgb(189, 255, 136);
     opacity: 100%;
-    border: 1px solid #999;
     text-align: center;
     padding: 20px;
     font-size: 20px;
@@ -37,8 +53,8 @@ body{
     transition: background 150ms ease-in;
 }
 
-.item:hover{
-    background: lightgreen;
+.czech:hover{
+    background-color: rgb(255, 255, 147);
 }
 
 @keyframes appear{
@@ -64,9 +80,9 @@ body{
 }
 
 @property --angle{
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
 .glowey::after, .glowey::before{
