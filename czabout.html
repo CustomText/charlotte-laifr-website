@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="czabout.css">
+    <link rel="icon" type="image/ico" href="icon.ico">
+    <title>charlotte-laifr.com</title>
+</head>
+<body>
+    <div class="bar">
+        <img src="C+L-removebg-preview.png"></img>
+        <div class="grid">
+            <button class="item" data-link="index.html">Domovské Místo</button>
+            <button class="item" data-link="charri.html">Slovo o Pravdě</button>
+            <button class="item" data-link="contact.html">Kontaktujte mě</button>
+            <button class="item" data-link="github.html">Zimní Trhy Aplikace</button>
+            <button class="item" data-link="help.html">Další sites</button>
+
+            <button class="czech" data-link="about.html">CZ | EN</button>
+        </div>
+    </div>
+    <img class="background-left" src="simple_math.webp"></img>
+    <div class="glowey">
+        <h1 class="text">Dobrý den, Já jsem Charlotte Laifr, a já myslím si že je čas se naučit o sobě.</h1>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll(".item");
+
+    buttons.forEach(buttons => {
+        buttons.addEventListener("click", () => {
+            page = buttons.dataset.link;
+            window.location.href = page;
+        })
+    })
+
+    const buttonCZ = document.querySelector(".czech");
+
+    buttonCZ.addEventListener("click", () => {
+        const page = buttonCZ.dataset.link;
+        window.location.href = page;
+    })
+</script>
+</html>

@@ -1,0 +1,130 @@
+body{
+    background: whitesmoke;
+}
+
+.bar{
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    backdrop-filter: blur(10px);
+    border: 1px solid black;
+    z-index: 1400;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+  left: 100px;
+}
+
+.item{
+  background: white;
+  opacity: 100%;
+  border: 1px solid #999;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  font-family: sans-serif;
+  color: black;
+  transition: background 150ms ease-in;
+}
+
+.item:hover{
+    background: lightgreen;
+}
+
+.czech{
+    background: rgb(255, 240, 109);
+    opacity: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    color: black;
+    transition: background 150ms ease-in;
+}
+
+.czech:hover{
+    background-color: rgb(170, 255, 147);
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.glowey{
+    top: 300px;
+    margin: 0 auto;
+    padding: 2em;
+    width: 300px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.glowey::after, .glowey::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 10px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.glowey::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+.text{
+    margin-top: 100px;
+    color: rgb(0, 0, 0);
+}
+
+.text::selection{
+    background-color: rgb(255, 254, 206);
+    color: rgb(200, 200, 71);
+}
+
+.background-left{
+    top: 250px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+}

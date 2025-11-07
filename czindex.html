@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charlotte-laifr.com</title>
+    <link rel="icon" type="image/ico" href="icon.ico">
+    <link rel="stylesheet" href="czstyles.css">
+</head>
+<body>
+    <div class="bar">
+        <img src="C+L-removebg-preview.png"></img>
+        <div class="grid">
+            <button class="item" data-link="about.html">O Mě</button>
+            <button class="item" data-link="charri.html">Slovo o Pravdě</button>
+            <button class="item" data-link="contact.html">Kontaktujte Mě</button>
+            <button class="item" data-link="github.html">Christmas Market App</button>
+            <button class="item" data-link="help.html">Další Sites</button>
+
+            <button class="czech" data-link="index.html">CZ | EN</button>
+        </div>
+    </div>
+    <div class="gallery">
+        <h1 class="quote" aria-hidden="True">"Imaginace je duležitější než znalost." - Albert Einstein</h1>
+        <div class="gallery-group">
+            <img src="blueberry.jpg" alt="picture" class="photo"></img>
+            <img src="flower.jpg" alt="picture" class="photo"></img>
+            <img src="halfdome.jpg" alt="picture" class="photo"></img>
+            <img src="natural-1324219_1280.jpg" alt="picture" class="photo"></img>
+            <img src="Prague.jpg" alt="picture" class="photo"></img>
+            <img src="steve.jpg" alt="picture" class="photo"></img>
+            <img src="sunset.jpg" alt="picture" class="photo"></img>
+            <img src="tree.jpg" alt="picture" class="photo"></img>
+            <img src="smoothie.jpg" alt="picture" class="photo"></img>
+        </div>
+        <div aria-hidden class="gallery-group">
+            <img src="blueberry.jpg" alt="picture" class="photo"></img>
+            <img src="flower.jpg" alt="picture" class="photo"></img>
+            <img src="halfdome.jpg" alt="picture" class="photo"></img>
+            <img src="natural-1324219_1280.jpg" alt="picture" class="photo"></img>
+            <img src="Prague.jpg" alt="picture" class="photo"></img>
+            <img src="steve.jpg" alt="picture" class="photo"></img>
+            <img src="sunset.jpg" alt="picture" class="photo"></img>
+            <img src="tree.jpg" alt="picture" class="photo"></img>
+            <img src="smoothie.jpg" alt="picture" class="photo"></img>
+        </div>
+    </div>
+    <p class="text">Dobrý den, já jsem Charlotte Laifr, a tohle je website co já jsem naprogramovala personálně aby já jsem mohla dostat ostatní aby rozuměli mě líp, jestli je to vědec z arXivu nebo člověk z generální populace, je potřeba ukázat vzorce.
+        Tenhle ten website byl daný k tobě protoře ono to cítilo dobře kreatovat další místo na internetu.
+        Tady, vy mužete najít numerozní idea co já jsem kreatovala a vy mužete najít víc o mě ten Vzorcový Hledačů Vánoční Trhová Aplikace bude dodělaná brzy.
+    </p>
+    <img src="denisovan.jpg" width=200px height=auto class="picture"></img>
+    <p class="text">Hledejte Vzorce :D</p>
+</body>
+<script>
+    const buttons = document.querySelectorAll(".item");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const page = button.dataset.link;
+            window.location.href = page;
+        })
+    })
+
+    const buttonCZ = document.querySelector(".czech");
+
+    buttonCZ.addEventListener("click", () => {
+        const page = buttonCZ.dataset.link;
+        window.location.href = page;
+    })
+</script>
+</html>
