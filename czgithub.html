@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charlotte-laifr.com</title>
+    <link rel="icon" type="image/ico" href="icon.ico">
+    <link rel="stylesheet" href="czgithub.css">
+</head>
+<body>
+    <div class="bar">
+        <img src="C+L-removebg-preview.png"></img>
+        <div class="grid">
+            <button class="item" data-link="index.html">Domovské Místo</button>
+            <button class="item" data-link="charri.html">Slovo o Pravdě</button>
+            <button class="item" data-link="contact.html">Kontaktujte Mě</button>
+            <button class="item" data-link="about.html">O Mě</button>
+            <button class="item" data-link="help.html">Další Sites</button>
+
+            <button class="czech" data-link="github.html">CZ | EN</button>
+        </div>
+    </div>
+    <h1 class="text">The ultimate present thinker.</h1>
+    <button class="gifted" onclick="downloadFile()">Download The App!</button>
+</body>
+<script>
+    const buttons = document.querySelectorAll(".item");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const page = button.dataset.link;
+            window.location.href = page;
+        })
+    })
+
+    const buttonCZ = document.querySelector(".czech");
+
+    buttonCZ.addEventListener("click", () => {
+        const page = buttonCZ.dataset.link;
+        window.location.href = page;
+    })
+
+    function downloadFile() {
+        const link = document.createElement('a');
+        link.href = "C:/Eduard laifr/programming stuff/AI/CharriPreview/main.py";
+        link.download = "main.py";
+        link.click();
+    }
+
+</script>
+</html>
